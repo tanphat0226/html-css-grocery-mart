@@ -25,16 +25,22 @@
     <script src="./assets/js/scripts.js"></script>
   </head>
   <body>
-    <header id="header"></header>
-    <script>
-      load("#header", "./template/header.html");
-    </script>
+    <!-- Header -->
+    <header id="header" class="header"></header>
 
-    <h1>Home page</h1>
+    <div class="container">
+      <script>
+        load("#header", "./template/header.html");
+      </script>
 
-    <footer id="footer"></footer>
-    <script>
-      load("#footer", "./template/footer.html");
-    </script>
+      <!-- Main -->
+      <h1>Home page</h1>
+
+      <!-- Footer -->
+      <footer id="footer"></footer>
+      <script>
+        load("#footer", "./template/footer.html");
+      </script>
+    </div>
   </body>
 </html>
