@@ -1,0 +1,27 @@
+.dropdown {
+  position: absolute;
+  left: 0;
+  padding-top: 50px;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: visibility, opacity, height;
+  transition: 0.3s ease-in;
+
+  &__inner {
+    position: relative;
+    padding: 30px;
+    border-radius: 20px;
+    background: var(--dropdown-bg-color);
+    box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
+
+    &::before {
+      content: url(../icons/dropdown-arrow.svg);
+      position: absolute;
+      top: -13px;
+      left: var(--arrow-left-pos);
+      translate: -50%;
+      filter: var(--dropdown-arrow-color);
+    }
+  }
+}
