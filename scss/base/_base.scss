@@ -11,8 +11,8 @@ html {
 body {
   font-family: Gordita, sans-serif;
   font-size: 1.6rem;
-
   color: var(--text-color);
+  background-color: var(--body-bg);
 }
 
 a {
@@ -24,6 +24,7 @@ button {
   border: none;
   outline: none;
   background: transparent;
+  cursor: pointer;
 }
 
 button,

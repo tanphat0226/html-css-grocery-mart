@@ -1,5 +1,4 @@
 $grid-breakpoints: (
-  xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
@@ -11,7 +10,7 @@ $grid-breakpoints: (
   $breakpoint: map-get($grid-breakpoints, $key);
 
   @if ($breakpoint) {
-    @media (min-width: ($breakpoint - 0.02)) {
+    @media (max-width: ($breakpoint - 0.02)) {
       @content;
     }
   } @else {
