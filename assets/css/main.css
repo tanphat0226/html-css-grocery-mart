@@ -165,9 +165,11 @@ button {
 button,
 input,
 textarea,
-select {
+select,
+a {
   font-family: inherit;
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .icon {
@@ -1418,14 +1420,15 @@ html.dark {
   left: 0;
   width: min(1240px, 100%);
   padding-top: 50px;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
   transition: visibility, opacity, height;
   transition: 0.3s ease-in;
 }
 .dropdown__inner {
-  --inner-max-height: min(582px, 100vh - 158px);
   --inner-padding: 30px;
   position: relative;
-  max-height: var(--inner-max-height);
   padding: var(--inner-padding);
   background: var(--dropdown-bg-color);
   border-radius: 20px;
@@ -1442,11 +1445,12 @@ html.dark {
 }
 
 .top-menu {
-  max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
+  --main-column-width: 292px;
+  position: relative;
 }
 .top-menu__main {
-  width: 292px;
-  max-height: inherit;
+  width: var(--main-column-width);
+  height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
   border-right: 1px solid var(--top-menu-border-color);
   overflow-y: auto;
 }
@@ -1455,16 +1459,25 @@ html.dark {
   display: flex;
   gap: 14px;
 }
+.menu-column + .menu-column {
+  margin-top: 20px;
+}
 .menu-column__icon {
   position: relative;
   width: 36px;
   height: 36px;
   flex-shrink: 0;
+  object-fit: contain;
+}
+@media (max-width: 1199.98px) {
+  .menu-column__icon {
+    display: none;
+  }
 }
 .menu-column__icon-1 {
   width: 30px;
   height: 30px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .menu-column__icon-2 {
   position: absolute;
@@ -1476,9 +1489,9 @@ html.dark {
 }
 .menu-column__content {
   flex: 1;
-  margin-top: 6px;
 }
 .menu-column__title {
+  margin-top: 4px;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 150%;
@@ -1487,15 +1500,28 @@ html.dark {
 .menu-column__list {
   margin-top: 19px;
 }
+.menu-column__item--active .sub-menu {
+  display: grid;
+}
+.menu-column__item--active > .menu-column__link, .menu-column__item:hover > .menu-column__link {
+  color: #0071dc;
+  font-weight: 500;
+}
 .menu-column__link {
   display: block;
   padding: 7px 0;
   font-size: 1.4rem;
   line-height: 142.857%;
 }
-.menu-column__link:hover {
-  color: #0071dc;
-  font-weight: 500;
+
+.sub-menu {
+  position: absolute;
+  inset: 0 0 0 var(--main-column-width);
+  padding-left: var(--inner-padding);
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--inner-padding);
+  overflow-y: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

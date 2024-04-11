@@ -1,21 +1,21 @@
+@use "../abstracts";
+
 .dropdown {
   position: absolute;
   left: 0;
 
   width: min(1240px, 100%);
   padding-top: 50px;
-  // visibility: hidden;
-  // opacity: 0;
-  // height: 0;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
   transition: visibility, opacity, height;
   transition: 0.3s ease-in;
 
   &__inner {
-    --inner-max-height: min(582px, 100vh - 158px);
     --inner-padding: 30px;
 
     position: relative;
-    max-height: var(--inner-max-height);
     padding: var(--inner-padding);
     background: var(--dropdown-bg-color);
 
@@ -35,11 +35,12 @@
 }
 
 .top-menu {
-  max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
+  --main-column-width: 292px;
 
+  position: relative;
   &__main {
-    width: 292px;
-    max-height: inherit;
+    width: var(--main-column-width);
+    height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
     border-right: 1px solid var(--top-menu-border-color);
 
     overflow-y: auto;
@@ -50,17 +51,27 @@
   display: flex;
   gap: 14px;
 
+  + .menu-column {
+    margin-top: 20px;
+  }
+
   &__icon {
     position: relative;
     width: 36px;
     height: 36px;
     flex-shrink: 0;
+
+    object-fit: contain;
+
+    @include abstracts.breakpoint(xl) {
+      display: none;
+    }
   }
 
   &__icon-1 {
     width: 30px;
     height: 30px;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   &__icon-2 {
@@ -74,10 +85,10 @@
 
   &__content {
     flex: 1;
-    margin-top: 6px;
   }
 
   &__title {
+    margin-top: 4px;
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 150%;
@@ -88,16 +99,35 @@
     margin-top: 19px;
   }
 
+  &__item {
+    &--active .sub-menu {
+      display: grid;
+    }
+  }
+
+  &__item--active > &__link,
+  &__item:hover > &__link {
+    color: #0071dc;
+    font-weight: 500;
+  }
+
   &__link {
     display: block;
     padding: 7px 0;
 
     font-size: 1.4rem;
     line-height: 142.857%;
-
-    &:hover {
-      color: #0071dc;
-      font-weight: 500;
-    }
   }
+}
+
+.sub-menu {
+  position: absolute;
+  inset: 0 0 0 var(--main-column-width);
+  padding-left: var(--inner-padding);
+
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--inner-padding);
+
+  overflow-y: auto;
 }
