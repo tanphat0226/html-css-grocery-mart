@@ -11,13 +11,17 @@
   transition: 0.3s ease-in;
 
   &__inner {
-    position: relative;
-    min-height: min(582px, 100vh - 158px);
+    --inner-max-height: min(582px, 100vh - 158px);
+    --inner-padding: 30px;
 
-    padding: 30px;
-    border-radius: 20px;
+    position: relative;
+    max-height: var(--inner-max-height);
+    padding: var(--inner-padding);
     background: var(--dropdown-bg-color);
+
+    border-radius: 20px;
     box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
+    overflow-y: auto;
 
     &::before {
       content: url(../icons/dropdown-arrow.svg);
@@ -31,13 +35,14 @@
 }
 
 .top-menu {
-  height: 100%;
+  max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
 
   &__main {
     width: 292px;
-    height: 100%;
-
+    max-height: inherit;
     border-right: 1px solid var(--top-menu-border-color);
+
+    overflow-y: auto;
   }
 }
 
