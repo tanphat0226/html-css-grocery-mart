@@ -3,7 +3,6 @@
 .dropdown {
   position: absolute;
   left: 0;
-
   width: min(1240px, 100%);
   padding-top: 50px;
   visibility: hidden;
@@ -87,7 +86,7 @@
     flex: 1;
   }
 
-  &__title {
+  &__heading {
     margin-top: 4px;
     font-size: 1.6rem;
     font-weight: 500;
@@ -130,4 +129,12 @@
   gap: var(--inner-padding);
 
   overflow-y: auto;
+
+  &--not-main {
+    display: grid;
+    position: initial;
+    inset: initial;
+    padding-left: 0;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

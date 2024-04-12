@@ -1490,7 +1490,7 @@ html.dark {
 .menu-column__content {
   flex: 1;
 }
-.menu-column__title {
+.menu-column__heading {
   margin-top: 4px;
   font-size: 1.6rem;
   font-weight: 500;
@@ -1522,6 +1522,13 @@ html.dark {
   grid-template-columns: repeat(3, 1fr);
   gap: var(--inner-padding);
   overflow-y: auto;
+}
+.sub-menu--not-main {
+  display: grid;
+  position: initial;
+  inset: initial;
+  padding-left: 0;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /*# sourceMappingURL=main.css.map */
