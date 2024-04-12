@@ -1433,7 +1433,6 @@ html.dark {
   background: var(--dropdown-bg-color);
   border-radius: 20px;
   box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
-  overflow-y: auto;
 }
 .dropdown__inner::before {
   content: url(../icons/dropdown-arrow.svg);
@@ -1446,11 +1445,12 @@ html.dark {
 
 .top-menu {
   --main-column-width: 292px;
+  --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
   position: relative;
 }
 .top-menu__main {
   width: var(--main-column-width);
-  height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+  height: var(--max-inner-height);
   border-right: 1px solid var(--top-menu-border-color);
   overflow-y: auto;
 }
@@ -1525,6 +1525,7 @@ html.dark {
 }
 .sub-menu--not-main {
   display: grid;
+  height: var(--max-inner-height);
   position: initial;
   inset: initial;
   padding-left: 0;
