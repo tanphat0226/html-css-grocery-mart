@@ -1,7 +1,7 @@
 <div class="container">
   <div class="top-bar">
     <!-- More button -->
-    <button class="top-bar__more">
+    <button class="top-bar__more js-toggle" toggle-target="#navbar">
       <img src="./assets/icons/more.svg" alt="" class="icon top-bar__more-icon" />
     </button>
 
@@ -12,7 +12,11 @@
     </a>
 
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav id="navbar" class="navbar hide">
+      <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
+        <img src="./assets/icons/arrow-left.svg" alt="" />
+      </button>
+
       <ul class="navbar__list js-dropdown-list">
         <li class="navbar__item">
           <a href="#!" class="navbar__link">
@@ -3048,6 +3052,7 @@
         </li>
       </ul>
     </nav>
+    <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
 
     <!-- Actions -->
     <div class="top-act">

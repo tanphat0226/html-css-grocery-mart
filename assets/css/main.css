@@ -166,6 +166,8 @@ button,
 input,
 textarea,
 select,
+img,
+div,
 a {
   font-family: inherit;
   color: inherit;
@@ -1299,21 +1301,63 @@ html.dark {
 }
 @media (max-width: 991.98px) {
   .navbar {
-    display: none;
+    position: fixed;
+    inset: 0 50% 0 0;
+    z-index: 9;
+    padding: 20px 0;
+    margin-left: 0;
+    background-color: #fff;
+    translate: -100%;
+    transition: translate 0.5s;
+  }
+  .navbar.show {
+    translate: 0;
+  }
+  .navbar.show ~ .navbar__overlay {
+    visibility: visible;
+    opacity: 1;
   }
 }
-@media (max-width: 767.98px) {
-  .navbar {
-    display: none;
+.navbar__close-btn {
+  display: none;
+  padding: 10px 40px;
+}
+@media (max-width: 991.98px) {
+  .navbar__close-btn {
+    display: block;
   }
 }
-.navbar__item:last-child a {
-  padding-right: 0;
+.navbar__overlay {
+  visibility: hidden;
+  opacity: 0;
+}
+@media (max-width: 991.98px) {
+  .navbar__overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 8;
+    transition: visibility 0.5s, opacity 0.5s;
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .navbar__item:hover .dropdown {
   visibility: visible;
   opacity: 1;
   height: auto;
+}
+@media (max-width: 991.98px) {
+  .navbar__item {
+    width: 100%;
+  }
+  .navbar__item:hover .dropdown {
+    display: none;
+  }
 }
 .navbar__link {
   height: 50px;
@@ -1322,6 +1366,14 @@ html.dark {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+}
+@media (max-width: 991.98px) {
+  .navbar__link {
+    padding: 0 40px;
+    font-size: 1.6rem;
+    line-height: 150%;
+    justify-content: space-between;
+  }
 }
 
 .top-act {
