@@ -100,6 +100,18 @@
 
     @include abstracts.breakpoint(lg) {
       width: 100%;
+
+      &:hover .dropdown {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+      }
+
+      &--active .dropdown {
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+      }
     }
   }
 
@@ -119,6 +131,17 @@
       line-height: 150%;
       justify-content: space-between;
     }
+  }
+
+  &__arrow {
+    @include abstracts.breakpoint(lg) {
+      rotate: -90deg;
+      transition: rotate 0.3s;
+    }
+  }
+
+  &__item--active &__arrow {
+    rotate: 0deg;
   }
 }
 

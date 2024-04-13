@@ -7,14 +7,14 @@
   padding-top: 54px;
   visibility: hidden;
   opacity: 0;
+  height: 0;
   transition: visibility, opacity, height;
-  transition: 0.3s ease-in;
+  transition: 0.3s linear;
 
   @include abstracts.breakpoint(lg) {
     position: initial;
-    visibility: visible;
-    opacity: 1;
     padding-top: 0;
+    transition: none;
   }
 
   &__inner {
