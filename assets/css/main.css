@@ -1582,9 +1582,7 @@ html.dark {
 
 .top-menu {
   --main-column-width: 292px;
-  --max-inner-height: calc(
-    min(582px, 100vh - 158px) - var(--inner-padding) * 2
-  );
+  --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
   position: relative;
 }
 .top-menu__main {
@@ -1704,6 +1702,12 @@ html.dark {
   inset: initial;
   padding-left: 0;
   grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 991.98px) {
+  .sub-menu--not-main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

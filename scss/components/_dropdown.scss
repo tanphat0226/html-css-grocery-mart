@@ -52,9 +52,7 @@
 
 .top-menu {
   --main-column-width: 292px;
-  --max-inner-height: calc(
-    min(582px, 100vh - 158px) - var(--inner-padding) * 2
-  );
+  --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
   position: relative;
 
   &__main {
@@ -183,5 +181,10 @@
     inset: initial;
     padding-left: 0;
     grid-template-columns: repeat(4, 1fr);
+
+    @include abstracts.breakpoint(lg) {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
   }
 }
