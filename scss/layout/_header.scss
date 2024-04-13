@@ -43,12 +43,17 @@
 
     padding: 20px 0;
     margin-left: 0;
-    background-color: #fff;
+    background-color: var(--sidebar-bg);
+    translate: 100%;
+    transition: translate 0.5s;
+
+    border-radius: 0px 20px 20px 0px;
     translate: -100%;
     transition: translate 0.5s;
 
     &.show {
       translate: 0;
+      box-shadow: 0px 40px 90px 20px var(--sidebar-shadow-color);
     }
 
     &.show ~ &__overlay {
@@ -57,12 +62,20 @@
     }
   }
 
+  @include abstracts.breakpoint(sm) {
+    inset: 0 20% 0 0;
+  }
+
   &__close-btn {
     display: none;
     padding: 10px 40px;
 
     @include abstracts.breakpoint(lg) {
       display: block;
+    }
+
+    @include abstracts.breakpoint(sm) {
+      padding: 0px 20px 10px;
     }
   }
 
@@ -87,7 +100,16 @@
       flex-direction: column;
       align-items: flex-start;
       overflow-y: auto;
-      height: calc(100% - 26px);
+      overscroll-behavior: contain;
+      height: calc(100% - 40px);
+    }
+
+    @include abstracts.breakpoint(md) {
+      height: calc(100% - 140px);
+    }
+
+    @include abstracts.breakpoint(sm) {
+      height: calc(100% - 124px);
     }
   }
 
@@ -120,7 +142,6 @@
     height: 50px;
     padding: 0 15px;
     gap: 6px;
-
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 146.667%;
@@ -130,6 +151,12 @@
       font-size: 1.6rem;
       line-height: 150%;
       justify-content: space-between;
+    }
+
+    @include abstracts.breakpoint(sm) {
+      height: 44px;
+
+      padding: 0 20px;
     }
   }
 
@@ -205,5 +232,28 @@
     display: block;
     width: 100%;
     border-radius: inherit;
+  }
+}
+
+.nav-btn {
+  height: 50px;
+  align-items: center;
+
+  padding: 0 40px;
+
+  @include abstracts.breakpoint(sm) {
+    height: 44px;
+    padding: 0 20px;
+  }
+
+  &__title {
+    margin-left: 16px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 146.667%;
+  }
+  &__qnt {
+    @extend .nav-btn__title;
+    margin-left: auto;
   }
 }
