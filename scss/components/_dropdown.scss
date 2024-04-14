@@ -10,7 +10,7 @@
   transition: visibility, opacity, height;
   transition: 0.3s linear;
 
-  @include abstracts.breakpoint(lg) {
+  @include abstracts.screen(lg) {
     position: initial;
     padding-top: 0;
     transition: none;
@@ -35,7 +35,7 @@
       filter: var(--dropdown-arrow-color);
     }
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
       padding: 0 40px;
 
       border-radius: 0;
@@ -47,7 +47,7 @@
       }
     }
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.screen(sm) {
       padding: 0 20px;
     }
   }
@@ -65,7 +65,7 @@
     border-right: 1px solid var(--top-menu-border-color);
     overflow-y: auto;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
       width: 100%;
       height: inherit;
       border-right: none;
@@ -77,7 +77,7 @@
   display: flex;
   gap: 14px;
 
-  @include abstracts.breakpoint(lg) {
+  @include abstracts.screen(lg) {
     margin-top: 10px;
     height: auto;
   }
@@ -93,11 +93,11 @@
     flex-shrink: 0;
     object-fit: contain;
 
-    @include abstracts.breakpoint(xl) {
+    @include abstracts.screen(xl) {
       display: none;
     }
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
       display: block;
     }
   }
@@ -128,7 +128,7 @@
     line-height: 150%;
     user-select: none;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
       margin-bottom: 26px;
     }
   }
@@ -136,7 +136,7 @@
   &__list {
     margin-top: 19px;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
       margin-top: 0;
     }
   }
@@ -172,7 +172,7 @@
   gap: var(--inner-padding);
   overflow-y: auto;
 
-  @include abstracts.breakpoint(lg) {
+  @include abstracts.screen(lg) {
     position: initial;
     inset: initial;
     grid-template-columns: 1fr;
@@ -187,7 +187,7 @@
     padding-left: 0;
     grid-template-columns: repeat(4, 1fr);
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
       grid-template-columns: 1fr;
       height: inherit;
     }
