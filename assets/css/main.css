@@ -1793,4 +1793,69 @@ html.dark {
   }
 }
 
+.slideshow {
+  margin: 40px 0;
+  position: relative;
+}
+.slideshow__inner {
+  height: 455px;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.slideshow__item {
+  flex-shrink: 0;
+  width: 100%;
+}
+.slideshow__img {
+  width: 100%;
+  object-fit: cover;
+}
+.slideshow__pages {
+  position: absolute;
+  left: 68px;
+  bottom: 68px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+}
+.slideshow__num {
+  color: currentColor;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.slideshow__slider {
+  position: relative;
+  width: 184px;
+  height: 4px;
+  flex-shrink: 0;
+  background-color: currentColor;
+}
+.slideshow__slider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 4px solid currentColor;
+}
+.slideshow__slider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 4px solid currentColor;
+}
+
 /*# sourceMappingURL=main.css.map */
