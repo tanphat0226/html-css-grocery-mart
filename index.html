@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,25 +32,71 @@
     </script>
 
     <!-- Main -->
-    <main class="container">
+    <main class="container home">
       <!-- Sideshow -->
-      <section class="slideshow">
-        <div class="slideshow__inner">
-          <div class="slideshow__item">
-            <a href="#!" class="slideshow__link">
-              <picture>
-                <source media="(max-width: 767.98px)" srcset="./assets/img/slideshow/item-1-md.png" />
-                <img src="./assets/img/slideshow/item-1.png" alt="" class="slideshow__img" />
-              </picture>
+      <div class="home__container">
+        <section class="slideshow">
+          <div class="slideshow__inner">
+            <div class="slideshow__item">
+              <a href="#!" class="slideshow__link">
+                <picture>
+                  <source media="(max-width: 767.98px)" srcset="./assets/img/slideshow/item-1-md.png" />
+                  <img src="./assets/img/slideshow/item-1.png" alt="" class="slideshow__img" />
+                </picture>
+              </a>
+            </div>
+          </div>
+          <div class="slideshow__pages">
+            <div class="slideshow__num">1</div>
+            <span class="slideshow__slider"></span>
+            <div class="slideshow__num">5</div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Browse Categories -->
+      <div class="home__container">
+        <h2 class="home__heading">Browse Categories</h2>
+        <div class="home__cate row row-cols-3 row-cols-md-1">
+          <div class="col">
+            <a href="#!">
+              <article class="cate-item">
+                <img src="assets/img/category-item/item-01.png" alt="" class="cate-item__thumb" />
+                <section class="cate-item__info">
+                  <h3 class="cate-item__title">$24 - $150</h3>
+                  <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
+                </section>
+              </article>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#!">
+              <article class="cate-item">
+                <img src="assets/img/category-item/item-02.png" alt="" class="cate-item__thumb" />
+                <section class="cate-item__info">
+                  <h3 class="cate-item__title">$24 - $150</h3>
+                  <p class="cate-item__desc">Espresso arabica and robusta beans</p>
+                </section>
+              </article>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#!">
+              <article class="cate-item">
+                <img src="assets/img/category-item/item-03.png" alt="" class="cate-item__thumb" />
+
+                <section class="cate-item__info">
+                  <h3 class="cate-item__title">$24 - $150</h3>
+                  <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
+                </section>
+              </article>
             </a>
           </div>
         </div>
-        <div class="slideshow__pages">
-          <div class="slideshow__num">1</div>
-          <span class="slideshow__slider"></span>
-          <div class="slideshow__num">5</div>
-        </div>
-      </section>
+      </div>
+
+      <!-- Product -->
+      <div class="home__container"></div>
     </main>
 
     <!-- Footer -->
