@@ -179,6 +179,12 @@ a {
   filter: var(--icon-color);
 }
 
+@media (max-width: 575.98px) {
+  .container {
+    padding-inline: 20px !important;
+  }
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -1358,6 +1364,8 @@ html.dark {
   --cate-item-title: #fff;
   --filter-btn-color: #fff;
   --filter-btn-bg-color: #171c28;
+  --product-card-bg: #171c28;
+  --product-card-shadow: rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1991,10 +1999,22 @@ html.dark {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  box-shadow: 0px 20px 60px var(--like-btn-shadow);
+  box-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
+}
+.like-btn:not(.like-btn--liked) .like-btn__icon--liked {
+  display: none;
+}
+.like-btn--liked .like-btn__icon {
+  display: none;
+}
+.like-btn__icon--liked {
+  margin-top: 8px;
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 16px;
   border-radius: 20px;
   background: var(--product-card-bg);
@@ -2052,7 +2072,6 @@ html.dark {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 141.667%;
-  margin-bottom: 20px;
 }
 .home__cate {
   --grid-gutter-x: 51px;
@@ -2071,7 +2090,7 @@ html.dark {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

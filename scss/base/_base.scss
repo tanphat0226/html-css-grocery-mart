@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 *,
 ::before,
 ::after {
@@ -42,4 +44,10 @@ a {
 
 .icon {
   filter: var(--icon-color);
+}
+
+.container {
+  @include abstracts.screen(sm) {
+    padding-inline: 20px !important;
+  }
 }

@@ -35,7 +35,7 @@
     <main class="container home">
       <!-- Sideshow -->
       <div class="home__container">
-        <section class="slideshow">
+        <div class="slideshow">
           <div class="slideshow__inner">
             <div class="slideshow__item">
               <a href="#!" class="slideshow__link">
@@ -54,21 +54,23 @@
             <span class="slideshow__slider"></span>
             <div class="slideshow__num">5</div>
           </div>
-        </section>
+        </div>
       </div>
 
       <!-- Browse Categories -->
       <div class="home__container">
-        <h2 class="home__heading">Browse Categories</h2>
+        <div class="home__row">
+          <h2 class="home__heading">Browse Categories</h2>
+        </div>
         <div class="home__cate row row-cols-3 row-cols-md-1">
           <div class="col">
             <a href="#!">
               <article class="cate-item">
                 <img src="assets/img/category-item/item-01.png" alt="" class="cate-item__thumb" />
-                <section class="cate-item__info">
+                <div class="cate-item__info">
                   <h3 class="cate-item__title">$24 - $150</h3>
                   <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
-                </section>
+                </div>
               </article>
             </a>
           </div>
@@ -76,10 +78,10 @@
             <a href="#!">
               <article class="cate-item">
                 <img src="assets/img/category-item/item-02.png" alt="" class="cate-item__thumb" />
-                <section class="cate-item__info">
+                <div class="cate-item__info">
                   <h3 class="cate-item__title">$37 - $160</h3>
                   <p class="cate-item__desc">Espresso arabica and robusta beans</p>
-                </section>
+                </div>
               </article>
             </a>
           </div>
@@ -88,10 +90,10 @@
               <article class="cate-item">
                 <img src="assets/img/category-item/item-03.png" alt="" class="cate-item__thumb" />
 
-                <section class="cate-item__info">
+                <div class="cate-item__info">
                   <h3 class="cate-item__title">$32 - $160</h3>
                   <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
-                </section>
+                </div>
               </article>
             </a>
           </div>
@@ -109,7 +111,7 @@
           </button>
         </div>
 
-        <div class="row row-cols-4 row-cols-md-2 row-cols-sm-1">
+        <div class="row row-cols-4 row-cols-lg-2 row-cols-sm-1 g-3">
           <!-- Product card 01 -->
           <div class="col">
             <article class="product-card">
@@ -118,8 +120,9 @@
                   <img src="./assets/img/products/produc-1.png" alt="" class="product-card__img" />
                 </a>
 
-                <button class="like-btn like-btn--liked product-card__like-btn">
+                <button class="like-btn product-card__like-btn">
                   <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                  <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
                 </button>
               </div>
               <h3 class="product-card__title">Coffee Beans - Espresso Arabica and Robusta Beans</h3>
@@ -127,7 +130,7 @@
               <div class="product-card__row">
                 <p class="product-card__price">$47.00</p>
                 <img src="./assets/icons/solid-star.svg" alt="" class="product-card__star" />
-                <sapn class="product-card__score">4.3</sapn>
+                <span class="product-card__score">4.3</span>
               </div>
             </article>
           </div>
@@ -139,8 +142,9 @@
                   <img src="./assets/img/products/produc-2.png" alt="" class="product-card__img" />
                 </a>
 
-                <button class="like-btn like-btn--liked product-card__like-btn">
+                <button class="like-btn product-card__like-btn">
                   <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                  <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
                 </button>
               </div>
               <h3 class="product-card__title">Lavazza Coffee Blends - Try the Italian Espresso</h3>
@@ -148,7 +152,7 @@
               <div class="product-card__row">
                 <p class="product-card__price">$47.00</p>
                 <img src="./assets/icons/solid-star.svg" alt="" class="product-card__star" />
-                <sapn class="product-card__score">3.4</sapn>
+                <span class="product-card__score">3.4</span>
               </div>
             </article>
           </div>
@@ -162,6 +166,7 @@
 
                 <button class="like-btn like-btn--liked product-card__like-btn">
                   <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                  <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
                 </button>
               </div>
               <h3 class="product-card__title">
@@ -171,7 +176,7 @@
               <div class="product-card__row">
                 <p class="product-card__price">$99.99</p>
                 <img src="./assets/icons/solid-star.svg" alt="" class="product-card__star" />
-                <sapn class="product-card__score">5.0</sapn>
+                <span class="product-card__score">5.0</span>
               </div>
             </article>
           </div>
@@ -183,8 +188,9 @@
                   <img src="./assets/img/products/produc-4.png" alt="" class="product-card__img" />
                 </a>
 
-                <button class="like-btn like-btn--liked product-card__like-btn">
+                <button class="like-btn product-card__like-btn">
                   <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                  <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
                 </button>
               </div>
               <h3 class="product-card__title">
@@ -194,7 +200,7 @@
               <div class="product-card__row">
                 <p class="product-card__price">$38.65</p>
                 <img src="./assets/icons/solid-star.svg" alt="" class="product-card__star" />
-                <sapn class="product-card__score">4.4</sapn>
+                <span class="product-card__score">4.4</span>
               </div>
             </article>
           </div>
