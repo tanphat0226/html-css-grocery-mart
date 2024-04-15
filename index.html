@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,7 +40,10 @@
             <div class="slideshow__item">
               <a href="#!" class="slideshow__link">
                 <picture>
-                  <source media="(max-width: 767.98px)" srcset="./assets/img/slideshow/item-1-md.png" />
+                  <source
+                    media="(max-width: 767.98px)"
+                    srcset="./assets/img/slideshow/item-1-md.png"
+                  />
                   <img src="./assets/img/slideshow/item-1.png" alt="" class="slideshow__img" />
                 </picture>
               </a>
@@ -74,7 +77,7 @@
               <article class="cate-item">
                 <img src="assets/img/category-item/item-02.png" alt="" class="cate-item__thumb" />
                 <section class="cate-item__info">
-                  <h3 class="cate-item__title">$24 - $150</h3>
+                  <h3 class="cate-item__title">$37 - $160</h3>
                   <p class="cate-item__desc">Espresso arabica and robusta beans</p>
                 </section>
               </article>
@@ -86,7 +89,7 @@
                 <img src="assets/img/category-item/item-03.png" alt="" class="cate-item__thumb" />
 
                 <section class="cate-item__info">
-                  <h3 class="cate-item__title">$24 - $150</h3>
+                  <h3 class="cate-item__title">$32 - $160</h3>
                   <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
                 </section>
               </article>
@@ -96,7 +99,107 @@
       </div>
 
       <!-- Product -->
-      <div class="home__container"></div>
+      <div class="home__container">
+        <div class="home__row">
+          <h2 class="home__heading">Total LavAzza 1320</h2>
+
+          <button class="filter-btn">
+            Filter
+            <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon icon" />
+          </button>
+        </div>
+
+        <div class="row row-cols-4 row-cols-md-2 row-cols-sm-1">
+          <!-- Product card 01 -->
+          <div class="col">
+            <article class="product-card">
+              <div class="product-card__img-wrap">
+                <a href="#!">
+                  <img src="./assets/img/products/produc-1.png" alt="" class="product-card__img" />
+                </a>
+
+                <button class="like-btn like-btn--liked product-card__like-btn">
+                  <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                </button>
+              </div>
+              <h3 class="product-card__title">Coffee Beans - Espresso Arabica and Robusta Beans</h3>
+              <p class="product-card__brand">Lavazza</p>
+              <div class="product-card__row">
+                <p class="product-card__price">$47.00</p>
+                <img src="./assets/icons/solid-star.svg" alt="" class="product-card__star" />
+                <sapn class="product-card__score">4.3</sapn>
+              </div>
+            </article>
+          </div>
+          <!-- Product card 02 -->
+          <div class="col">
+            <article class="product-card">
+              <div class="product-card__img-wrap">
+                <a href="#!">
+                  <img src="./assets/img/products/produc-2.png" alt="" class="product-card__img" />
+                </a>
+
+                <button class="like-btn like-btn--liked product-card__like-btn">
+                  <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                </button>
+              </div>
+              <h3 class="product-card__title">Lavazza Coffee Blends - Try the Italian Espresso</h3>
+              <p class="product-card__brand">Lavazza</p>
+              <div class="product-card__row">
+                <p class="product-card__price">$47.00</p>
+                <img src="./assets/icons/solid-star.svg" alt="" class="product-card__star" />
+                <sapn class="product-card__score">3.4</sapn>
+              </div>
+            </article>
+          </div>
+          <!-- Product card 03 -->
+          <div class="col">
+            <article class="product-card">
+              <div class="product-card__img-wrap">
+                <a href="#!">
+                  <img src="./assets/img/products/produc-3.png" alt="" class="product-card__img" />
+                </a>
+
+                <button class="like-btn like-btn--liked product-card__like-btn">
+                  <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                </button>
+              </div>
+              <h3 class="product-card__title">
+                Lavazza - Caffè Espresso Black Tin - Ground coffee
+              </h3>
+              <p class="product-card__brand">welikecoffee</p>
+              <div class="product-card__row">
+                <p class="product-card__price">$99.99</p>
+                <img src="./assets/icons/solid-star.svg" alt="" class="product-card__star" />
+                <sapn class="product-card__score">5.0</sapn>
+              </div>
+            </article>
+          </div>
+          <!-- Product card 04 -->
+          <div class="col">
+            <article class="product-card">
+              <div class="product-card__img-wrap">
+                <a href="#!">
+                  <img src="./assets/img/products/produc-4.png" alt="" class="product-card__img" />
+                </a>
+
+                <button class="like-btn like-btn--liked product-card__like-btn">
+                  <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                </button>
+              </div>
+              <h3 class="product-card__title">
+                Qualità Oro Mountain Grown - Espresso Coffee Beans
+              </h3>
+              <p class="product-card__brand">Lavazza</p>
+              <div class="product-card__row">
+                <p class="product-card__price">$38.65</p>
+                <img src="./assets/icons/solid-star.svg" alt="" class="product-card__star" />
+                <sapn class="product-card__score">4.4</sapn>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
