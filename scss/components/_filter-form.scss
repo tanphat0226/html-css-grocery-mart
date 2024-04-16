@@ -10,7 +10,7 @@
   right: 0;
   z-index: 1;
 
-  padding: 30px;
+  padding: 30px 0;
 
   border-radius: 20px;
   background-color: var(--filter-form-bg);
@@ -18,16 +18,12 @@
   transition: opacity, visibility;
   transition-duration: 0.25s;
 
-  @include abstracts.screen(xl) {
-    height: calc(100vh - 80px);
-    overflow-y: auto;
-    padding-bottom: 0;
-
-    overscroll-behavior: contain;
-  }
-
   @include abstracts.screen(sm) {
-    width: 85vw;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
   }
 
   &.hide {
@@ -68,7 +64,8 @@
       margin-top: 20px;
 
       &--inline {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 30px;
       }
     }
@@ -122,6 +119,10 @@
         width: 121px;
         height: 36px;
         padding: 0 12px;
+
+        @include abstracts.screen(xl) {
+          width: 100%;
+        }
       }
 
       @include abstracts.screen(sm) {
@@ -143,6 +144,10 @@
       &::placeholder {
         color: #9e9da8;
         font-weight: 400;
+      }
+
+      @include abstracts.screen(sm) {
+        font-size: 1.6rem;
       }
     }
 
@@ -169,6 +174,10 @@
       line-height: 142.857%;
 
       cursor: pointer;
+
+      @include abstracts.screen(xl) {
+        flex: 1;
+      }
     }
 
     &-select + &-select {
@@ -179,6 +188,10 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px 20px;
+
+      @include abstracts.screen(sm) {
+        gap: 10px;
+      }
     }
 
     &-tag {
@@ -221,10 +234,9 @@
     margin-top: 32px;
     justify-content: flex-end;
 
-    @include abstracts.screen(xl) {
+    @include abstracts.screen(sm) {
       position: sticky;
-      bottom: 0;
-      padding-bottom: 16px;
+      bottom: 30px;
       background-color: var(--filter-form-bg);
     }
   }
@@ -236,6 +248,7 @@
 
     @include abstracts.screen(sm) {
       flex: 1;
+      height: 42px;
     }
   }
 
@@ -247,9 +260,24 @@
     font-size: 1.4rem;
   }
 
+  &__content,
+  &__footer,
+  &__heading {
+    padding: 0 30px;
+  }
+
   &__content {
+    max-height: calc(100vh - 350px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
     @include abstracts.screen(xl) {
       flex-direction: column;
+    }
+
+    @include abstracts.screen(sm) {
+      max-height: calc(100vh - 230px);
+      padding-bottom: 60px;
     }
   }
 }
