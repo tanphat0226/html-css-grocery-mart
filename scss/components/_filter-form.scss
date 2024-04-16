@@ -4,7 +4,7 @@
 
 .filter {
   position: absolute;
-  top: 50px;
+  top: 55px;
   right: 0;
   z-index: 1;
 
@@ -13,6 +13,13 @@
   border-radius: 20px;
   background-color: var(--filter-form-bg);
   box-shadow: 0px 40px 90px var(--filter-form-shadow);
+
+  &__arrow {
+    position: absolute;
+    top: -15px;
+    right: 24px;
+    height: 20.5px;
+  }
 
   &__heading,
   &__form-label {
@@ -174,5 +181,24 @@
     width: 1px;
     margin: 0 30px;
     background-color: #eee;
+  }
+
+  &__footer {
+    margin-top: 32px;
+    justify-content: flex-end;
+  }
+
+  &__cancel,
+  &__submit {
+    height: 38px;
+    padding: 0 10px;
+  }
+
+  &__cancel {
+    font-size: 1.5rem;
+  }
+
+  &__submit {
+    font-size: 1.4rem;
   }
 }
