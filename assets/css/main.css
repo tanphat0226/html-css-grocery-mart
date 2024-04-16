@@ -170,9 +170,11 @@ select,
 img,
 div,
 a {
+  padding: 0;
   font-family: inherit;
   color: inherit;
   outline: none;
+  border: none;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -1331,6 +1333,7 @@ html {
   --product-card-shadow: rgba(237, 237, 246, 0.2);
   --filter-form-bg: #fff;
   --filter-form-shadow: rgba(200, 200, 200, 0.4);
+  --filter-form-tag-bg: #f8f8fb;
 }
 @media (max-width: 991.98px) {
   html {
@@ -2124,19 +2127,84 @@ html.dark {
 .filter__form-slider::after {
   left: var(--max-value);
 }
-.filter__form-input {
-  width: 121px;
-  height: 36px;
-  padding: 0 12px;
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 142.857%;
+.filter__form-text-input, .filter__form-select-wrap {
   border-radius: 6px;
   border: 1px solid #d2d1d6;
 }
+.filter__form-text-input {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  width: 334px;
+  height: 44px;
+  overflow: hidden;
+}
+.filter__form-text-input--small {
+  width: 121px;
+  height: 36px;
+  padding: 0 12px;
+}
+.filter__form-text-input--small .filter__form-input {
+  font-size: 1.4rem;
+}
+.filter__form-input {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.filter__form-input::placeholder {
+  color: #9e9da8;
+  font-weight: 400;
+}
+.filter__form-input-icon {
+  margin-left: 12px;
+}
+.filter__form-select-wrap {
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+.filter__form-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  min-width: var(--width, 108px);
+  height: calc(100% - 10px);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+  cursor: pointer;
+}
+.filter__form-select + .filter__form-select {
+  border-left: 1px solid #d2d1d6;
+}
+.filter__form-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+.filter__form-tag {
+  padding: 6px 12px;
+  color: #9e9da8;
+  border-radius: 6px;
+  background-color: var(--filter-form-tag-bg);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+  transition: color 0.2s;
+}
+.filter__form-tag:hover {
+  color: var(--text-color);
+}
 .filter__row {
   display: flex;
-  flex: 1;
+}
+.filter__separate {
+  width: 1px;
+  margin: 0 30px;
+  background-color: #eee;
 }
 
 .home__container {
