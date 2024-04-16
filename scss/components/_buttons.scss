@@ -57,9 +57,14 @@
     color: #9e9da8;
     background-color: transparent;
     font-weight: 400;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &--primary {
+    color: #171c28;
     background-color: #ffb700;
   }
 
