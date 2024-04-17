@@ -1319,6 +1319,7 @@ html {
     hue-rotate(212deg) brightness(91%) contrast(96%);
   --body-bg: #f6f6f6;
   --header-bg-color: #eee;
+  --footer-bg-color: var(--header-bg-color);
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
   --top-act-group-separate: #ededf6;
@@ -1620,6 +1621,61 @@ html.dark {
 }
 .nav-btn__qnt {
   margin-left: auto;
+}
+
+.footer {
+  padding: 50px 0;
+  font-size: 1.4rem;
+  background: var(--footer-bg-color);
+}
+.footer__row {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+.footer__desc {
+  margin-top: 30px;
+  line-height: 1.5;
+}
+.footer__help-text {
+  margin-top: 40px;
+  line-height: 1.5;
+}
+.footer__form {
+  display: flex;
+  gap: 10px;
+  padding: 16px 0;
+}
+.footer__input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 2px solid #d2d1d6;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.footer__list {
+  margin-top: 30px;
+}
+.footer__link {
+  display: inline-block;
+}
+.footer__text, .footer__link {
+  padding: 8px 0;
+  line-height: 1.4;
+}
+.footer__text:hover, .footer__link:hover {
+  color: #0071dc;
+}
+.footer__label {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 500;
 }
 
 .logo {
@@ -2356,6 +2412,9 @@ html.dark {
   }
 }
 
+.home {
+  margin-bottom: 50px;
+}
 .home__container {
   margin-top: 40px;
 }
