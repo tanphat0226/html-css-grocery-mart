@@ -1339,6 +1339,7 @@ html {
   --filter-form-bg: #fff;
   --filter-form-shadow: rgba(200, 200, 200, 0.4);
   --filter-form-tag-bg: #f8f8fb;
+  --social-shadow: var(--product-card-shadow);
 }
 @media (max-width: 991.98px) {
   html {
@@ -1633,9 +1634,27 @@ html.dark {
   grid-template-columns: 2fr 1.3fr 1fr 1fr 1.5fr;
   gap: 60px;
 }
+@media (max-width: 991.98px) {
+  .footer__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__row {
+    grid-template-columns: 1fr;
+  }
+}
+.footer__logo.logo {
+  margin-left: 0;
+}
 .footer__desc {
   margin-top: 30px;
   line-height: 1.5;
+}
+@media (max-width: 767.98px) {
+  .footer__desc {
+    width: min(400px, 100%);
+  }
 }
 .footer__help-text {
   margin-top: 40px;
@@ -1653,6 +1672,11 @@ html.dark {
   border: 2px solid #d2d1d6;
   font-size: 1.5rem;
   font-weight: 500;
+}
+@media (max-width: 767.98px) {
+  .footer__input {
+    font-size: 1.6rem;
+  }
 }
 .footer__heading {
   text-transform: uppercase;
@@ -1673,9 +1697,66 @@ html.dark {
   color: #0071dc;
 }
 .footer__label {
-  margin-top: 20px;
-  margin-bottom: 8px;
+  padding-top: 8px;
   font-weight: 500;
+}
+.footer__text {
+  display: block;
+  margin-bottom: 10px;
+}
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+@media (max-width: 767.98px) {
+  .footer__bottom {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+}
+.footer__socials {
+  display: flex;
+  gap: 20px;
+}
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  opacity: 0.68;
+  transition: opacity, translate;
+  transition-duration: 0.3s;
+  box-shadow: 0px 20px 60px 10px var(--social-shadow);
+}
+@media (max-width: 767.98px) {
+  .footer__social {
+    width: 42px;
+    height: 42px;
+  }
+}
+.footer__social:hover {
+  opacity: 1;
+  translate: 0 -3px;
+}
+.footer__social--facebook {
+  background-color: #0071dc;
+}
+.footer__social--youtube {
+  background-color: #ff0000;
+}
+.footer__social--tiktok, .footer__social--twitter {
+  background-color: #000;
+}
+.footer__social--linkedin {
+  background-color: #0077b5;
+}
+.footer__social-icon {
+  width: 14px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
 }
 
 .logo {
@@ -2295,7 +2376,7 @@ html.dark {
 }
 @media (max-width: 575.98px) {
   .filter__form-input {
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
   }
 }
 .filter__form-input-icon {
