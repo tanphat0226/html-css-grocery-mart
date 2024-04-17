@@ -25,16 +25,25 @@
     <script src="./assets/js/scripts.js"></script>
   </head>
   <body>
-    <header id="header"></header>
-    <script>
-      load("#header", "./templates/header.html");
-    </script>
+    <main class="auth">
+      <!-- Auth intro -->
+      <div class="auth__intro">
+        <img src="" alt="" class="auth__intro-img" />
+        <p class="auth__intro-text">
+          The best of luxury brand values, high quality products, and innovative services
+        </p>
+      </div>
 
-    <h1>Sign-in page</h1>
-
-    <footer id="footer"></footer>
-    <script>
-      load("#footer", "./templates/footer.html");
-    </script>
+      <!-- Auth content -->
+      <div class="auth__content">
+        <div class="auth__content-inner">
+          <!-- Logo -->
+          <a href="./" class="logo">
+            <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
+            <h1 class="logo__title">grocerymart</h1>
+          </a>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

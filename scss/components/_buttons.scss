@@ -38,6 +38,11 @@
 }
 
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
   padding: 0 20px;
   height: 46px;
   border-radius: 6px;
@@ -50,7 +55,9 @@
   user-select: none;
 
   + .btn {
-    margin-left: 20px;
+    &:not(.btn--no-margin) {
+      margin-left: 20px;
+    }
   }
 
   &--text {
