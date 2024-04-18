@@ -2637,12 +2637,25 @@ html.dark {
 }
 .form__checkbox:has(:checked)::after {
   left: 2px;
-  top: 5px;
+  top: 4px;
   width: 15px;
   height: 8px;
   border: 3px solid;
   border-color: transparent transparent #fff #fff;
   rotate: -45deg;
+}
+
+.message {
+  padding: 14px;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+.message--success {
+  background-color: rgba(39, 243, 117, 0.2);
+  border: 1.5px solid #46a05c;
 }
 
 .home {
@@ -2725,6 +2738,7 @@ html.dark {
   bottom: 50px;
 }
 .auth__intro-img {
+  width: var(--width);
   max-width: 100%;
 }
 .auth__intro-text {
@@ -2804,6 +2818,9 @@ html.dark {
     margin-top: 0;
   }
 }
+.auth__form-forgot {
+  margin-top: 10px;
+}
 .auth__link {
   color: #0071dc;
   font-size: 1.5rem;
@@ -2845,6 +2862,9 @@ html.dark {
 }
 .auth__text-link {
   font-size: inherit;
+}
+.auth__message {
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
