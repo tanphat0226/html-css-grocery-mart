@@ -6,28 +6,9 @@
   gap: 14px;
   cursor: pointer;
 
-  @include abstracts.screen(lg) {
-    gap: 10px !important;
-    margin-left: 40px;
-  }
-
-  @include abstracts.screen(sm) {
-    margin-left: 0;
-  }
-
   &__title {
     font-size: 2.2rem;
     font-weight: 700;
     line-height: 145.455%;
-
-    @include abstracts.screen(lg) {
-      font-size: 1.8rem;
-    }
-  }
-
-  &__img {
-    @include abstracts.screen(lg) {
-      width: 24px;
-    }
   }
 }
