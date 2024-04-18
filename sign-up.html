@@ -28,8 +28,8 @@
     <main class="auth">
       <!-- Auth intro -->
       <div class="auth__intro">
-        <a href="./" class="logo auth__intro-logo">
-          <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img d-none d-md-flex" />
+        <a href="./" class="logo auth__intro-logo d-none d-md-flex">
+          <img src="../assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
           <h1 class="logo__title">grocerymart</h1>
         </a>
         <img src="./assets/img/auth/intro.svg" alt="" class="auth__intro-img" />
@@ -56,16 +56,35 @@
           <form action="./index-logined.html" class="form auth__form">
             <div class="form__group">
               <div class="form__text-input">
-                <input type="email" name="" id="" placeholder="Email" class="form__input" />
+                <input
+                  type="email"
+                  name=""
+                  id=""
+                  placeholder="Email"
+                  class="form__input"
+                  required
+                />
                 <img src="./assets/icons/message.svg" alt="" class="form__input-icon" />
+                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
               </div>
+              <p class="form__error">Email is not in correct format!</p>
             </div>
 
             <div class="form__group">
               <div class="form__text-input">
-                <input type="password" name="" id="" placeholder="Password" class="form__input" />
+                <input
+                  type="password"
+                  name=""
+                  id=""
+                  placeholder="Password"
+                  class="form__input"
+                  required
+                  minlength="6"
+                />
+                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                 <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
               </div>
+              <p class="form__error">Password is at least 6 characters long!</p>
             </div>
 
             <div class="form__group">
@@ -76,24 +95,28 @@
                   id=""
                   placeholder="Confirm Password"
                   class="form__input"
+                  minlength="6"
+                  required
                 />
+                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                 <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
               </div>
+              <p class="form__error">Password does not match!</p>
             </div>
 
             <div class="form__group form__group--inline">
               <label class="form__checkbox">
-                <input type="checkbox" name="" id="" class="form__checkbox-input" />
+                <input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
                 <span class="form__checkbox-label">Set as default card</span>
               </label>
               <a href="" class="auth__link form__pull-right">Recovery Password</a>
             </div>
 
             <div class="form__group auth__btn-group">
-              <button class="btn btn--primary auth__btn">Sign Up</button>
+              <button class="btn btn--primary auth__btn form__submit-btn">Sign Up</button>
               <button class="btn btn--outline auth__btn btn--no-margin">
                 <img src="./assets/icons/google.svg" alt="" class="btn__icon icon" />
-                Sign in with Gmail
+                Sign in with Google
               </button>
             </div>
           </form>

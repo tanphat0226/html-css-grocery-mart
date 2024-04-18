@@ -20,7 +20,7 @@
     gap: 50px;
 
     &-logo,
-    &-text {
+    &-next {
       position: absolute;
       left: 50%;
       translate: -50%;
@@ -35,7 +35,7 @@
     }
 
     &-img {
-      min-width: 100%;
+      max-width: 100%;
     }
 
     &-text {
