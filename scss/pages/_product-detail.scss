@@ -1,0 +1,10 @@
+.product-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  background-color: var(--prpoduct-page-bg);
+}
+
+.product-container {
+  margin-top: 30px;
+}
