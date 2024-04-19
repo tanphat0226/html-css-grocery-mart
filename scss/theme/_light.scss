@@ -48,7 +48,6 @@ html {
   // Filter form
   --filter-form-bg: #fff;
   --filter-form-shadow: rgba(200, 200, 200, 0.4);
-  --filter-form-tag-bg: #f8f8fb;
 
   //Footer social
   --social-shadow: var(--product-card-shadow);
@@ -62,9 +61,11 @@ html {
 
   // Form
   --form-placeholder-color: #d2d1d6;
+  --form-tag-bg: #f8f8fb;
 
   // Product detail
-  --prpoduct-page-bg: #fff;
+  --product-page-bg: #fff;
+  --prod-info-bg: #f6f6f6;
 
   // Breadcrumbs
   --breadcrumbs-bg-color: #f6f6f6;

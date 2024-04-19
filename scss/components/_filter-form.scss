@@ -40,8 +40,7 @@
     filter: var(--filter-form-arrow-color);
   }
 
-  &__heading,
-  &__form-label {
+  &__heading {
     font-size: 2.2rem;
     font-weight: 500;
     line-height: 145.455%;
@@ -50,57 +49,11 @@
   &__form {
     margin-top: 30px;
 
-    &-label {
-      display: block;
-
-      &--small {
-        font-size: 1.4rem;
-        line-height: 142.857%;
-        margin-bottom: 10px;
-      }
-    }
-
     &-group {
-      margin-top: 20px;
-
-      &--inline {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-      }
+      margin-top: 20px !important;
     }
 
-    &-slider {
-      position: relative;
-      width: 100%;
-      height: 2px;
-      background-color: #d2d1d6;
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        display: block;
-        top: 50%;
-        translate: 0 -50%;
-        width: 22px;
-        height: 22px;
-        background-color: var(--filter-form-bg);
-        border-radius: 50%;
-        border: 6px solid #ffb700;
-      }
-
-      &::before {
-        left: var(--min-value);
-      }
-
-      &::after {
-        left: var(--max-value);
-      }
-    }
-
-    &-text-input,
-    &-select-wrap {
+    &-text-input {
       border-radius: 6px;
       border: 1px solid #d2d1d6;
     }
@@ -153,62 +106,6 @@
 
     &-input-icon {
       margin-left: 12px;
-    }
-
-    &-select-wrap {
-      display: flex;
-      align-items: center;
-      height: 45px;
-    }
-
-    &-select {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 14px;
-      min-width: var(--width, 108px);
-      height: calc(100% - 10px);
-
-      font-size: 1.4rem;
-      font-weight: 500;
-      line-height: 142.857%;
-
-      cursor: pointer;
-
-      @include abstracts.screen(xl) {
-        flex: 1;
-      }
-    }
-
-    &-select + &-select {
-      border-left: 1px solid #d2d1d6;
-    }
-
-    &-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 20px;
-
-      @include abstracts.screen(sm) {
-        gap: 10px;
-      }
-    }
-
-    &-tag {
-      padding: 6px 12px;
-      color: #9e9da8;
-      border-radius: 6px;
-      background-color: var(--filter-form-tag-bg);
-
-      font-size: 1.4rem;
-      font-weight: 500;
-      line-height: 142.857%;
-
-      transition: color 0.2s;
-
-      &:hover {
-        color: var(--text-color);
-      }
     }
   }
   // End Form
