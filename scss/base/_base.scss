@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -43,7 +47,6 @@ a {
   color: inherit;
   outline: none;
   border: none;
-  -webkit-tap-highlight-color: transparent;
 }
 
 input {
@@ -58,4 +61,14 @@ input {
   @include abstracts.screen(sm) {
     padding-inline: 20px !important;
   }
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: 600;
 }

@@ -88,4 +88,11 @@ html {
 
   // Preview card
   --preview-card-bg: #fafafd;
+
+  @include abstracts.screen(md) {
+    --preview-card-bg: #fff;
+  }
+
+  // text content
+  --text-content-hr-bg: #ebebeb;
 }
