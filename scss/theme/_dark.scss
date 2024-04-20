@@ -59,10 +59,11 @@ html.dark {
   --form-tag-bg: #171c28;
 
   // Product detail
-  --prpoduct-page-bg: #292e39;
+  --product-page-bg: #292e39;
   --prod-info-bg: #171c28;
-  --prod-info-content-bg: transparent;
+  --prod-info-content-bg: #171c28;
   --prod-info-content-shadow: rgba(0, 0, 0, 0.2);
+  --prod-info-tag-bg: #292e39;
 
   @include abstracts.screen(md) {
     --product-page-bg: #292e39;
@@ -72,4 +73,7 @@ html.dark {
   // Breadcrumbs
   --breadcrumbs-bg-color: #171c28;
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
+
+  // Search bar
+  --search-bar-bg: #171c28;
 }

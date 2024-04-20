@@ -1358,6 +1358,7 @@ html {
   --prod-info-bg: #f6f6f6;
   --prod-info-content-bg: #fff;
   --prod-info-content-shadow: rgba(237, 237, 246, 0.2);
+  --prod-info-tag-bg: #ededf6;
   --breadcrumbs-bg-color: #f6f6f6;
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
   --search-bar-bg: #fff;
@@ -1424,12 +1425,14 @@ html.dark {
   --auth-content-heading: #b9babe;
   --form-placeholder-color: #b9babe;
   --form-tag-bg: #171c28;
-  --prpoduct-page-bg: #292e39;
+  --product-page-bg: #292e39;
   --prod-info-bg: #171c28;
-  --prod-info-content-bg: transparent;
+  --prod-info-content-bg: #171c28;
   --prod-info-content-shadow: rgba(0, 0, 0, 0.2);
+  --prod-info-tag-bg: #292e39;
   --breadcrumbs-bg-color: #171c28;
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
+  --search-bar-bg: #171c28;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -3043,14 +3046,14 @@ html.dark {
   object-fit: cover;
   border: 1.5px solid rgba(158, 158, 158, 0.4);
   border-radius: 8px;
-  cursor: pointer;
   opacity: 0.9;
   transition: opacity, border-color;
   transition-duration: 0.3s;
 }
-.prod-preview__thumbs-img:hover {
+.prod-preview__thumbs-img:not(.prod-preview__thumbs-img--current):hover {
   opacity: 1;
   border-color: #9e9e9e;
+  cursor: pointer;
 }
 .prod-preview__thumbs-img--current {
   border-color: #ffb700;
@@ -3060,7 +3063,7 @@ html.dark {
 .prod-info {
   padding: 60px;
   background-color: var(--prod-info-bg);
-  border-radius: 20px;
+  border-radius: 10px;
 }
 @media (max-width: 1399.98px) {
   .prod-info {
@@ -3076,10 +3079,11 @@ html.dark {
   .prod-info {
     margin-top: 0;
     padding: 0 16px 16px;
+    border-radius: 20px;
   }
 }
 .prod-info__tag {
-  background-color: #ededf6;
+  background-color: var(--prod-info-tag-bg);
 }
 .prod-info__form-group {
   margin-top: 20px;
@@ -3110,11 +3114,12 @@ html.dark {
 }
 .prod-info__tax {
   padding: 2px 8px;
+  border-radius: 4px;
   color: #67b044;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 142.857%;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
+  background: rgba(103, 176, 68, 0.2);
 }
 .prod-info__total-price {
   margin: 20px 0;

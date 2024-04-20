@@ -83,14 +83,14 @@
       object-fit: cover;
       border: 1.5px solid rgba(158, 158, 158, 0.4);
       border-radius: 8px;
-      cursor: pointer;
       opacity: 0.9;
       transition: opacity, border-color;
       transition-duration: 0.3s;
 
-      &:hover {
+      &:not(&--current):hover {
         opacity: 1;
         border-color: #9e9e9e;
+        cursor: pointer;
       }
 
       &--current {
@@ -104,7 +104,7 @@
 .prod-info {
   padding: 60px;
   background-color: var(--prod-info-bg);
-  border-radius: 20px;
+  border-radius: 10px;
 
   @include abstracts.screen(xxl) {
     padding: 40px;
@@ -117,10 +117,11 @@
   @include abstracts.screen(md) {
     margin-top: 0;
     padding: 0 16px 16px;
+    border-radius: 20px;
   }
 
   &__tag {
-    background-color: #ededf6;
+    background-color: var(--prod-info-tag-bg);
   }
 
   &__form-group {
@@ -158,12 +159,12 @@
 
   &__tax {
     padding: 2px 8px;
+    border-radius: 4px;
     color: #67b044;
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 142.857%;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%),
-      #67b044;
+    background: rgba(103, 176, 68, 0.2);
   }
 
   &__total-price {
