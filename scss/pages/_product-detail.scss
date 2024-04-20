@@ -4,23 +4,23 @@
   display: flex;
   flex-direction: column;
   min-height: 80vh;
+  padding-bottom: 50px;
   background-color: var(--product-page-bg);
-
-  @include abstracts.screen(md) {
-    background-color: #ededf6;
-  }
 }
 
 .product-container {
   margin-top: 30px;
+  @include abstracts.screen(md) {
+    margin-top: 20px;
+  }
 }
 
-.product-detail {
+.prod-info-content {
   @include abstracts.screen(md) {
     margin-top: 20px;
     border-radius: 20px;
-    background: #fff;
-    box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+    background: var(--prod-info-content-bg);
+    box-shadow: 0px 20px 60px 10px var(--prod-info-content-shadow);
   }
 }
 
@@ -30,6 +30,10 @@
   @include abstracts.screen(lg) {
     display: flex;
     flex-direction: row-reverse;
+  }
+
+  @include abstracts.screen(md) {
+    padding: 16px;
   }
 
   &__list {
@@ -100,10 +104,7 @@
 .prod-info {
   padding: 60px;
   background-color: var(--prod-info-bg);
-
-  @include abstracts.screen(md) {
-    background-color: #fff;
-  }
+  border-radius: 20px;
 
   @include abstracts.screen(xxl) {
     padding: 40px;
@@ -111,6 +112,11 @@
 
   @include abstracts.screen(lg) {
     margin-top: 30px;
+  }
+
+  @include abstracts.screen(md) {
+    margin-top: 0;
+    padding: 0 16px 16px;
   }
 
   &__tag {
@@ -187,12 +193,20 @@
   @include abstracts.screen(xxl) {
     padding-left: 10px;
   }
+
+  @include abstracts.screen(lg) {
+    padding-left: 0;
+  }
 }
 
 .prod-prop {
   display: flex;
   gap: 16px;
   margin-top: 30px;
+
+  @include abstracts.screen(md) {
+    margin-top: 20px;
+  }
 
   &__icon {
     align-self: flex-start;

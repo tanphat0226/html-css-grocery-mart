@@ -60,6 +60,14 @@ html.dark {
 
   // Product detail
   --prpoduct-page-bg: #292e39;
+  --prod-info-bg: #171c28;
+  --prod-info-content-bg: transparent;
+  --prod-info-content-shadow: rgba(0, 0, 0, 0.2);
+
+  @include abstracts.screen(md) {
+    --product-page-bg: #292e39;
+    --prod-info-bg: #171c28;
+  }
 
   // Breadcrumbs
   --breadcrumbs-bg-color: #171c28;

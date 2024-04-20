@@ -8,13 +8,14 @@
   padding: 20px;
   gap: 20px;
 
-  @include abstracts.screen(md) {
-    gap: 16px;
-  }
-
   border-radius: 10px;
   background: var(--breadcrumbs-bg-color);
   box-shadow: 0px 20px 60px 10px var(--breadcrumbs-shadow);
+
+  @include abstracts.screen(md) {
+    gap: 16px;
+    border-radius: 20px;
+  }
 
   &__link {
     display: flex;

@@ -66,8 +66,22 @@ html {
   // Product detail
   --product-page-bg: #fff;
   --prod-info-bg: #f6f6f6;
+  --prod-info-content-bg: #fff;
+  --prod-info-content-shadow: rgba(237, 237, 246, 0.2);
+
+  @include abstracts.screen(md) {
+    --product-page-bg: #fafafd;
+    --prod-info-bg: #fff;
+  }
 
   // Breadcrumbs
   --breadcrumbs-bg-color: #f6f6f6;
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
+
+  @include abstracts.screen(md) {
+    --breadcrumbs-bg-color: #fff;
+  }
+
+  // Search bar
+  --search-bar-bg: #fff;
 }
