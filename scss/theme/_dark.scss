@@ -25,6 +25,12 @@ html.dark {
   --top-menu-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7464%)
     hue-rotate(49deg) brightness(105%) contrast(95%);
 
+  // Header
+  --header-act-dropdown-bg-color: #2f3441;
+  --header-act-dropdown-shadow-color: rgba(23, 28, 40, 0.4);
+
+  --header-act-dropdown-border-color: #171c28;
+
   // Sidebar
   --sidebar-bg: #292e39;
   --sidebar-shadow-color: rgba(23, 28, 40, 0.4);
