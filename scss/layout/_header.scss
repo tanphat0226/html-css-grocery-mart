@@ -349,6 +349,12 @@
     border-color: var(--header-act-dropdown-border-color);
   }
 
+  &__separate {
+    margin: 20px 0;
+    height: 1px;
+    background-color: var(--header-act-dropdown-border-color);
+  }
+
   &__row {
     display: flex;
     align-items: center;
