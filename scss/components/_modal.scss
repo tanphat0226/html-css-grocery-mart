@@ -5,7 +5,7 @@
   inset: 0;
 }
 
-.dialog {
+.modal {
   @extend %fill-screen;
   z-index: 99;
   display: flex;
@@ -27,16 +27,58 @@
     background-color: rgba($color: #000000, $alpha: 0.2);
   }
 
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    padding: 3px 20px;
+    font-size: 3.5rem;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__body {
+    max-height: calc(100dvh - 200px);
+    overflow-y: auto;
+    padding-right: 20px;
+    scroll-behavior: contain;
+  }
+
   &__content {
     position: relative;
     background-color: var(--dialog-bg-color);
     z-index: 1;
 
-    max-width: min(450px, 100% - 40px);
     padding: 30px;
+    width: min(var(--content-width, 800px), 100% - 40px);
 
     border-radius: 20px;
     box-shadow: 0px 20px 60px 10px var(--dialog-shadow);
+  }
+
+  &--small &__content {
+    --content-width: 400px;
+  }
+
+  &--large &__content {
+    --content-width: 100px;
+  }
+
+  &--fill &__content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 700;
   }
 
   &__text {

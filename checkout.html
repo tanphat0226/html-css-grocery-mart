@@ -328,26 +328,26 @@
       load("#footer", "./templates/footer.html");
     </script>
 
-    <!-- Dialog / Popup / Modal -->
-    <div id="delete-confirm" class="dialog hide">
-      <div class="dialog__content">
-        <p class="dialog__text">Do you want to delete this item?</p>
-        <div class="dialog__bottom">
+    <!-- Modal -->
+    <div id="delete-confirm" class="modal modal--small hide">
+      <div class="modal__content">
+        <p class="modal__text">Do you want to delete this item?</p>
+        <div class="modal__bottom">
           <button
-            class="btn btn--text dialog__btn btn--small js-toggle"
+            class="btn btn--text modal__btn btn--small js-toggle"
             toggle-target="#delete-confirm"
           >
             Cancel
           </button>
           <button
-            class="btn btn--primary dialog__btn btn--small btn--no-margin js-toggle"
+            class="btn btn--primary modal__btn btn--small btn--no-margin js-toggle"
             toggle-target="#delete-confirm"
           >
             Confirm
           </button>
         </div>
       </div>
-      <div class="dialog__overlay"></div>
+      <div class="modal__overlay"></div>
     </div>
   </body>
 </html>
