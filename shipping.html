@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -411,7 +411,7 @@
                   <span>$201.65</span>
                 </div>
 
-                <a href="#!" class="btn btn--primary btn--rounded cart-info__next-btn">
+                <a href="./payment.html" class="btn btn--primary btn--rounded cart-info__next-btn">
                   Continue to checkout
                 </a>
               </div>
@@ -448,20 +448,20 @@
         <p class="modal__text">Do you want to delete this item?</p>
         <div class="modal__bottom">
           <button
-            class="btn btn--text modal__btn btn--small js-toggle"
+            class="btn btn--outline modal__btn btn--small js-toggle"
             toggle-target="#delete-confirm"
           >
             Cancel
           </button>
           <button
-            class="btn btn--primary modal__btn btn--small btn--no-margin js-toggle"
+            class="btn btn--primary btn--danger modal__btn btn--small btn--no-margin js-toggle"
             toggle-target="#delete-confirm"
           >
-            Confirm
+            Delete
           </button>
         </div>
       </div>
-      <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
+      <div class="modal__overlay"></div>
     </div>
 
     <!-- Modal: Add new address -->
@@ -534,6 +534,7 @@
                   placeholder="City/District/Town"
                   class="form__input js-toggle"
                   toggle-target="#city-select-dialog"
+                  readonly
                 />
                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
 
