@@ -49,7 +49,16 @@ a {
   border: none;
 }
 
-input {
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 1s 99999s;
+  -webkit-text-fill-color: var(--text-color) !important;
+}
+
+input,
+textarea {
   background-color: transparent;
 }
 

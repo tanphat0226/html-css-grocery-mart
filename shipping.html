@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -465,11 +465,12 @@
     </div>
 
     <!-- Modal: Add new address -->
-    <div id="add-new-address" class="modal hide" style="--content-width: 650px">
+    <div id="add-new-address" class="modal show" style="--content-width: 650px">
+      
+      <form action="#!" class="form">
       <div class="modal__content">
-        <h2 class="modal__heading">Add new shopping address</h2>
+        <h2 class="modal__heading">Add new shipping address</h2>
         <div class="modal__body">
-          <form action="#!" class="form">
             <div class="form__row">
               <div class="form__group">
                 <label for="name" class="form__label form__label--small">Name</label>
@@ -544,7 +545,6 @@
                 <span class="form__checkbox-label">Set as default address</span>
               </label>
             </div>
-          </form>
         </div>
         <div class="modal__bottom">
           <button
@@ -560,6 +560,7 @@
             Create
           </button>
         </div>
+      </form>
       </div>
       <div class="modal__overlay"></div>
     </div>
