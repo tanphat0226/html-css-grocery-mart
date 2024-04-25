@@ -1856,7 +1856,7 @@ html.dark {
 .card-preview-item__img-wrap {
   position: relative;
   padding-top: 100%;
-  border: 1.5px solid var(--header-act-dropdown-border-color);
+  border: 1px solid var(--header-act-dropdown-border-color);
 }
 .card-preview-item__thumb {
   position: absolute;
@@ -2703,7 +2703,7 @@ html.dark {
   align-items: center;
   padding: 0 12px;
   border-radius: 10px;
-  border: 1.5px solid #d2d1d6;
+  border: 1px solid #d2d1d6;
 }
 .form__text-area:focus-within, .form__text-input:focus-within {
   border-color: #77dae6;
@@ -2871,6 +2871,11 @@ html.dark {
   font-weight: 500;
   line-height: 145.455%;
 }
+.form__label--medium {
+  padding-bottom: 20px;
+  font-size: 1.8rem;
+  line-height: 144.444%;
+}
 .form__label--small {
   font-size: 1.4rem;
   line-height: 142.857%;
@@ -2966,7 +2971,7 @@ html.dark {
   width: 19px;
   height: 19px;
   border-radius: 5px;
-  border: 1.5px solid #9e9da8;
+  border: 1px solid #9e9da8;
 }
 .form__checkbox:has(:checked)::before {
   border-color: #ffb700;
@@ -3015,7 +3020,7 @@ html.dark {
 }
 .message--success {
   background-color: rgba(39, 243, 117, 0.2);
-  border: 1.5px solid #46a05c;
+  border: 1px solid #46a05c;
 }
 
 .breadcrumbs {
@@ -3614,7 +3619,7 @@ html.dark {
   width: 65px;
   height: 65px;
   object-fit: cover;
-  border: 1.5px solid rgba(158, 158, 158, 0.4);
+  border: 1px solid rgba(158, 158, 158, 0.4);
   border-radius: 8px;
   opacity: 0.9;
   transition: opacity, border-color;
@@ -3833,10 +3838,20 @@ html.dark {
     padding: 16px;
   }
 }
+.cart-info__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .cart-info__heading {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 141.667%;
+}
+.cart-info__heading--lv2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
 }
 .cart-info__sub-heading {
   margin: 30px 0;
@@ -3897,6 +3912,34 @@ html.dark {
 }
 .cart-info__next-btn {
   margin-top: 30px;
+}
+.cart-info__edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  line-height: 144.444%;
+}
+.cart-info__checkbox-input {
+  appearance: none;
+}
+.cart-info__checkbox-input::before {
+  content: url("../icons/checkbox-uncheck.svg");
+}
+.cart-info__checkbox-input:not(:checked)::before {
+  filter: var(--icon-color);
+}
+.cart-info__checkbox-input:checked::before {
+  content: url("../icons/checkbox-checked.svg");
+}
+.cart-info__desc {
+  margin-top: 6px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146.667%;
+}
+.cart-info__form {
+  margin-bottom: 30px;
 }
 
 .cart-item {
@@ -4138,24 +4181,61 @@ html.dark {
   display: flex;
   align-items: flex-end;
 }
-.address-card__ctrl-btn {
+
+.payment-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--Background-2, #f6f6f6);
+}
+.payment-item--pointer {
+  cursor: pointer;
+}
+.payment-item__content {
+  flex: 1;
+}
+.payment-item__title {
   font-size: 1.8rem;
+  font-weight: 500;
   line-height: 144.444%;
 }
-.address-card__checkbox-input {
-  appearance: none;
+.payment-item__desc, .payment-item__detail {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146.667%;
 }
-.address-card__checkbox-input::before {
-  content: url("../icons/checkbox-uncheck.svg");
+.payment-item__desc {
+  margin-top: 4px;
 }
-.address-card__checkbox-input:not(:checked)::before {
-  filter: var(--icon-color);
+.payment-item__detail {
+  margin-right: -8px;
+  color: #0071dd;
+  padding: 8px;
 }
-.address-card__checkbox-input:checked::before {
-  content: url("../icons/checkbox-checked.svg");
+.payment-item__detail:hover {
+  text-decoration: underline;
+}
+.payment-item__thumb {
+  width: 70px;
+  height: 54px;
+  object-fit: cover;
+}
+.payment-item__cost {
+  color: #9e9da8;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.payment-item__checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 14px;
+}
+.payment-item__checkbox-input:checked + .payment-item__cost {
+  color: inherit;
 }
 
 /*# sourceMappingURL=main.css.map */

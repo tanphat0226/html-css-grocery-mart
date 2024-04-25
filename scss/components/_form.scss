@@ -62,7 +62,7 @@ $error-color: #f44336;
 
     padding: 0 12px;
     border-radius: 10px;
-    border: 1.5px solid #d2d1d6;
+    border: 1px solid #d2d1d6;
 
     &:focus-within {
       border-color: #77dae6;
@@ -250,6 +250,12 @@ $error-color: #f44336;
     font-weight: 500;
     line-height: 145.455%;
 
+    &--medium {
+      padding-bottom: 20px;
+      font-size: 1.8rem;
+      line-height: 144.444%;
+    }
+
     &--small {
       font-size: 1.4rem;
       line-height: 142.857%;
@@ -364,7 +370,7 @@ $error-color: #f44336;
       width: 19px;
       height: 19px;
       border-radius: 5px;
-      border: 1.5px solid #9e9da8;
+      border: 1px solid #9e9da8;
     }
   }
 
