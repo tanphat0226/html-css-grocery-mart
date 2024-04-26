@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
-    <title>Add New Card | Grocery Mart</title>
+    <title>Edit Personal Info | Grocery Mart</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
@@ -68,7 +68,7 @@
                   <h3 class="profile-menu__title">Manage Account</h3>
                   <ul class="profile-menu__list">
                     <li>
-                      <a href="./edit-personal-info.html" class="profile-menu__link">
+                      <a href="" class="profile-menu__link">
                         <span class="profile-menu__icon">
                           <img src="./assets/icons/profile.svg" alt="" class="icon" />
                         </span>
@@ -176,22 +176,22 @@
                           class="cart-info__back-arrow"
                         />
                       </a>
-                      Add credit or debit card
+                      Personal Info
                     </h2>
 
                     <form action="./profile.html" class="form form-card">
                       <div class="form__row">
                         <div class="form__group">
-                          <label for="first-name" class="form__label form-card__label">
-                            First Name
+                          <label for="full-name" class="form__label form-card__label">
+                            Full Name
                           </label>
                           <div class="form__text-input">
                             <input
                               autofocus
                               type="text"
                               name=""
-                              id="first-name"
-                              placeholder="First name"
+                              id="full-name"
+                              placeholder="Full name"
                               class="form__input"
                               required
                             />
@@ -204,15 +204,15 @@
                           <p class="form__error">Email is not in correct format!</p>
                         </div>
                         <div class="form__group">
-                          <label for="last-name" class="form__label form-card__label">
-                            Last Name
+                          <label for="email" class="form__label form-card__label">
+                            Email address
                           </label>
                           <div class="form__text-input">
                             <input
-                              type="text"
+                              type="email"
                               name=""
-                              id="last-name"
-                              placeholder="Last name"
+                              id="email"
+                              placeholder="Email address"
                               class="form__input"
                               required
                             />
@@ -226,80 +226,16 @@
                         </div>
                       </div>
                       <div class="form__row">
-                        <div class="form__group">
-                          <label for="card-info" class="form__label form-card__label">
-                            Card Information
-                          </label>
-                          <div class="form__text-input">
-                            <input
-                              type="text"
-                              name=""
-                              id="card-info"
-                              placeholder="Card Number"
-                              class="form__input"
-                              required
-                            />
-                            <img
-                              src="./assets/icons/form-error.svg"
-                              alt=""
-                              class="form__input-icon-error"
-                            />
-                          </div>
-                          <p class="form__error">Number is invalid!</p>
-                        </div>
-                        <div class="form__group">
-                          <label for="card-expired" class="form__label form-card__label">
-                            Expiration Date
-                          </label>
-                          <div class="form__text-input">
-                            <input
-                              type="text"
-                              name=""
-                              id="card-expired"
-                              placeholder="MM/YY"
-                              class="form__input"
-                              required
-                            />
-                            <img
-                              src="./assets/icons/form-error.svg"
-                              alt=""
-                              class="form__input-icon-error"
-                            />
-                          </div>
-                          <p class="form__error">Email is not in correct format!</p>
-                        </div>
-                      </div>
-
-                      <div class="form__row">
-                        <div class="form__group">
-                          <label for="card-cvv" class="form__label form-card__label"> CVV </label>
-                          <div class="form__text-input">
-                            <input
-                              type="text"
-                              name=""
-                              id="card-cvv"
-                              placeholder="123"
-                              class="form__input"
-                              required
-                            />
-                            <img
-                              src="./assets/icons/form-error.svg"
-                              alt=""
-                              class="form__input-icon-error"
-                            />
-                          </div>
-                          <p class="form__error">Number is invalid!</p>
-                        </div>
                         <div class="form__group">
                           <label for="phone" class="form__label form-card__label">
-                            Phone Number
+                            Phone number
                           </label>
                           <div class="form__text-input">
                             <input
                               type="tel"
                               name=""
                               id="phone"
-                              placeholder="084"
+                              placeholder="084967 367 467"
                               class="form__input"
                               required
                             />
@@ -309,29 +245,34 @@
                               class="form__input-icon-error"
                             />
                           </div>
-                          <p class="form__error">Phone is not in correct format!</p>
+                          <p class="form__error">Number is invalid!</p>
                         </div>
-                      </div>
-
-                      <div class="form__group">
-                        <label for="set-defaul-card" class="form__label form-card__label">
-                          Card Preferences
-                        </label>
-                        <label class="form__checkbox">
-                          <input
-                            type="checkbox"
-                            name=""
-                            id="set-defaul-card"
-                            class="form__checkbox-input d-none"
-                            checked
-                          />
-                          <span class="form__checkbox-label">Set as default card</span>
-                        </label>
+                        <div class="form__group">
+                          <label for="password" class="form__label form-card__label">
+                            Password
+                          </label>
+                          <div class="form__text-input">
+                            <input
+                              type="password"
+                              name=""
+                              id="password"
+                              placeholder="**********"
+                              class="form__input"
+                              required
+                            />
+                            <img
+                              src="./assets/icons/form-error.svg"
+                              alt=""
+                              class="form__input-icon-error"
+                            />
+                          </div>
+                          <p class="form__error">Email is not in correct format!</p>
+                        </div>
                       </div>
 
                       <div class="form-card__bottom">
                         <a href="./profile.html" class="btn btn--text">Cancel</a>
-                        <button class="btn btn--primary btn--rounded">Save Card</button>
+                        <button class="btn btn--primary btn--rounded">Save</button>
                       </div>
                     </form>
                   </div>
