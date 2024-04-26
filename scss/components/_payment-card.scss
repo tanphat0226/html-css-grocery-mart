@@ -1,0 +1,55 @@
+.payment-card {
+  position: relative;
+  height: 100%;
+  padding: 20px;
+  color: #fff;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  &__img {
+    position: absolute;
+    top: -8px;
+    right: 0;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__type {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 142.857%;
+  }
+
+  &__number {
+    position: relative;
+    margin-top: 37px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+  }
+
+  &__bottom {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 175%;
+  }
+
+  &__value {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 140%;
+  }
+}
