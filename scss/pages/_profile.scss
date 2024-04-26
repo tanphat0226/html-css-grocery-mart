@@ -7,8 +7,8 @@
 
   &__sidebar {
     border-radius: 20px;
-    background: var(--Secondary-Color-Background, #fff);
-    box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+    background: var(--profile-sidebar-bg);
+    box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
     overflow: hidden;
     padding-bottom: 30px;
   }
@@ -21,9 +21,10 @@
     background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%),
       url("../img/profile/cover.png") no-repeat center / cover;
 
-    box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+    box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
 
     color: #fff;
+
     &__avatar {
       width: 121px;
       height: 121px;
@@ -75,6 +76,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      border-radius: 5px;
 
       height: 32px;
       padding-inline: 4px;
@@ -83,8 +85,7 @@
       line-height: 146.667%;
 
       &:hover {
-        background-color: #ebebeb;
-        border-radius: 5px;
+        background-color: var(--profile-sidebar-link-hover-bg);
       }
     }
   }

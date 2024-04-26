@@ -17,7 +17,7 @@
   @extend %flexItemCenter;
   padding: 30px 0;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 
   @include abstracts.screen(lg) {
     padding: 20px 0;
