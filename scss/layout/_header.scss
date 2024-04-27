@@ -257,6 +257,7 @@
   }
 
   &__user {
+    position: relative;
     width: 50px;
     height: 50px;
 
@@ -264,12 +265,25 @@
     box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
 
     cursor: pointer;
+
+    &:hover .act-dropdown {
+      display: block;
+    }
   }
 
   &__avatar {
     display: block;
     width: 100%;
     border-radius: inherit;
+  }
+
+  &__dropdown {
+    right: -10px !important;
+    width: min(300px, 100vw) !important;
+  }
+
+  &__dropdown-arrow {
+    right: 10px !important;
   }
 }
 
@@ -419,5 +433,46 @@
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 146.667%;
+  }
+}
+
+.user-menu {
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+  }
+
+  &__name {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+
+  &__list {
+    margin-top: 30px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+  }
+
+  &__separate {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--header-act-dropdown-border-color);
+  }
+
+  &__icon {
+    width: 24px;
   }
 }
